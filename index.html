@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering Your Body</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showPage('home')">
+    <header>
+        <nav>
+            <a onclick="showPage('home')">Home</a>
+            <a onclick="showPage('pilates')">Pilates</a>
+            <a onclick="showPage('womens-health')">Women's Health</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home" class="page-content active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Empowering Your Body</h1>
+                </div>
+            </section>
+
+            <section class="intro-section">
+
+    <div class="vision-container">
+        <h2 class="vision-title">Meine Vision</h2>
+        
+        <div class="vision-content">
+            <div class="vision-image-wrapper">
+                <div class="image-placeholder">
+                    <span>Photo Placeholder</span>
+                </div>
+                <div class="mission-box">
+                    <p class="mission-intro">Ich bin Sabrina Zerlauth,</p>
+                    <p>ganzheitliche Frauen Gesundheitstrainerin und Pilates-Coach.</p>
+                    <p>Meine Mission ist es, Frauen dabei zu unterstützen, Ihre Stärke zu spüren und mutige Entscheidungen für Ihr eigenes Wohlbefinden zu treffen.</p>
+                </div>
+            </div>
+
+            <div class="vision-text">
+                <p>Ich glaube daran, dass jede Frau die Fähigkeit hat, über ihre Grenzen hinauszuwachsen, Verletzlichkeit in Stärke zu verwandeln und ihr Leben bewusst zu gestalten.</p>
+                <p>Persönlich begleite ich Dich beim Thema Bewegung, gesunde Ernährung und Mentaltraining.</p>
+                <p>Damit Du Dich in Deinem Körper rundum wohlfühlst.</p>
+                <p class="vision-footer">Mutig. Kraftvoll. Ganzheitlich.</p>
+            </div>
+            </div>
+        </section>
+
+            <div class="cta-buttons">
+                <button onclick="showPage('pilates')">Pilates</button>
+                <button onclick="showPage('womens-health')">Women's Health</button>
+            </div>
+        </div>
+
+        <div id="pilates" class="page-content">
+            <h1>Pilates Coaching</h1>
+            <p>Find your strength through controlled, mindful movement.</p>
+        </div>
+
+        <div id="womens-health" class="page-content">
+            <h1>Women's Health</h1>
+            <p>Dedicated support for every stage of your journey.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
