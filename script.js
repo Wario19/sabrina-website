@@ -15,11 +15,11 @@ function showPage(pageId) {
 
     // 4. Update the browser tab title based on the page
     const titles = {
-        'home': 'Empowering Your Body',
+        'home': 'Home - Sabrina Zerlauth',
         'pilates': 'Pilates Coaching',
         'womens-health': "Women's Health"
     };
-    document.title = titles[pageId] || 'Empowering Your Body';
+    document.title = titles[pageId] || 'Home - Sabrina Zerlauth';
 
     // Hide the header on the homepage, show it on other pages
     const header = document.querySelector('header');

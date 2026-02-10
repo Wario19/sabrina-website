@@ -106,22 +106,43 @@ header.hidden-on-home {
 }
 
 .hero {
-    height: 70vh;
-    min-height: 360px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('bg-image.png');
-    background-size: cover;
-    background-position: center;
+    padding: 40px 0;
+    background: transparent; /* removed large background image */
 }
 
-.hero-content {
-    background: rgba(255,255,255,0.75);
-    padding: 16px 22px;
-    border-radius: 10px;
-    max-width: 92%;
+.hero-inner {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 48px; /* gap to the side */
+}
+
+.hero-gallery {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.hero-thumb {
+    flex: 1 1 220px;
+    max-width: 360px;
+    background-color: #bfbfbf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    aspect-ratio: 4 / 5;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.hero-thumb span {
+    padding: 10px;
 }
 
 
@@ -256,9 +277,19 @@ header.hidden-on-home {
         padding: 6px 10px;
     }
     .hero {
-        height: 50vh;
-        min-height: 260px;
-        background-position: center 30%;
+        padding: 20px 0;
+    }
+    .hero-inner {
+        padding: 0 18px;
+    }
+    .hero-gallery {
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+    }
+    .hero-thumb {
+        width: 100%;
+        max-width: 420px;
     }
     .vision-title {
         font-size: clamp(1.6rem, 6vw, 2.8rem);
