@@ -110,39 +110,65 @@ header.hidden-on-home {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 0;
     background: transparent; /* removed large background image */
+    height: calc(100vh - 78px); /* fill viewport (accounting for fixed header) */
 }
 
 .hero-inner {
     width: 100%;
-    max-width: 1100px;
-    padding: 0 48px; /* gap to the side */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: none; /* let images grow to fill screen */
+    padding: 0 48px; /* side gap */
+}
+
+.hero-heading {
+    text-align: center;
+    margin: 8px 0;
+    font-size: clamp(1.2rem, 2.4vw, 2rem);
 }
 
 .hero-gallery {
     display: flex;
-    gap: 24px;
+    gap: 28px;
     justify-content: center;
     align-items: stretch;
-    margin-top: 20px;
+    flex: 1 1 auto;
 }
 
 .hero-thumb {
-    flex: 1 1 220px;
-    max-width: 360px;
+    flex: 1 1 0;
     background-color: #bfbfbf;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    aspect-ratio: 4 / 5;
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    height: 100%;
 }
 
-.hero-thumb span {
-    padding: 10px;
+.placeholder-label {
+    padding: 12px;
+    z-index: 1;
+}
+
+.hero-name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    font-weight: 700;
+    font-size: clamp(1.4rem, 3.8vw, 2.6rem);
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+    pointer-events: none;
 }
 
 
@@ -269,15 +295,8 @@ header.hidden-on-home {
 }
 
 @media (max-width: 600px) {
-    nav {
-        gap: 10px;
-    }
-    nav a {
-        font-size: 0.95rem;
-        padding: 6px 10px;
-    }
     .hero {
-        padding: 20px 0;
+        height: calc(100vh - 78px);
     }
     .hero-inner {
         padding: 0 18px;
@@ -289,16 +308,24 @@ header.hidden-on-home {
     }
     .hero-thumb {
         width: 100%;
-        max-width: 420px;
+        max-width: none;
+        height: calc((100vh - 78px - 48px) / 3); /* split available height across three thumbs */
     }
-    .vision-title {
-        font-size: clamp(1.6rem, 6vw, 2.8rem);
-        margin-bottom: 30px;
-    }
-    .mission-intro {
-        font-size: 1.1rem;
-    }
+        
 }
+.hero-thumb {
+    width: 100%;
+    max-width: 420px;
+    height: 90%;
+}
+.vision-title {
+    font-size: clamp(1.6rem, 6vw, 2.8rem);
+    margin-bottom: 30px;
+}
+.mission-intro {
+    font-size: 1.1rem;
+ }
+
 
 .about-text {
     text-align: left;
