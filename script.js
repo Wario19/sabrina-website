@@ -13,6 +13,10 @@ function showPage(pageId) {
         selectedPage.classList.add('active');
     }
 
+    // Scroll to top of page
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
     // 4. Update the browser tab title based on the page
     const titles = {
         'home': 'Home - Sabrina Zerlauth',

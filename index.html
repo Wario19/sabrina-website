@@ -43,7 +43,6 @@
                 <div class="image-placeholder">
                     <img src="images/hp-3.jpg" alt="Hero 3" class="hero-image">
                 </div>
-                
             </div>
 
             <div class="mission-box">
@@ -51,12 +50,11 @@
                     <p>ganzheitliche Frauen Gesundheitstrainerin und Pilates-Coach.</p>
                     <p>Meine Mission ist es, Frauen dabei zu unterstützen, Ihre Stärke zu spüren und mutige Entscheidungen für Ihr eigenes Wohlbefinden zu treffen.</p>
                 </div>
-
+                        <h2 class="vision-title">Meine Vision</h2>
             <div class="vision-text">
-                <h2 class="vision-title">Meine Vision</h2>
-                <p>Ich glaube daran, dass jede Frau die Fähigkeit hat, über ihre Grenzen hinauszuwachsen, Verletzlichkeit in Stärke zu verwandeln und ihr Leben bewusst zu gestalten.</p>
-                <p>Persönlich begleite ich Dich beim Thema Bewegung, gesunde Ernährung und Mentaltraining.</p>
-                <p>Damit Du Dich in Deinem Körper rundum wohlfühlst.</p>
+                
+                <p>Ich glaube daran, dass jede Frau die Fähigkeit hat, über ihre Grenzen hinauszuwachsen, Verletzlichkeit in Stärke zu verwandeln und ihr Leben bewusst zu gestalten. Persönlich begleite ich Dich beim Thema Bewegung, gesunde Ernährung und Mentaltraining.
+                    Damit Du Dich in Deinem Körper rundum wohlfühlst. </p>
                 <p class="vision-footer">Mutig. Kraftvoll. Ganzheitlich.</p>
             </div>
             </div>
@@ -65,19 +63,54 @@
 </section>
 
             <div class="cta-buttons">
-                <button onclick="showPage('pilates')">Pilates</button>
-                <button onclick="showPage('womens-health')">Women's Health</button>
+                <button class="cta-btn cta-pilates" onclick="showPage('pilates')">
+                    <span class="cta-label">Pilates</span>
+                </button>
+                <button class="cta-btn cta-womens" onclick="showPage('womens-health')">
+                    <span class="cta-label">Women's Health</span>
+                </button>
             </div>
         </div>
 
-        <div id="pilates" class="page-content">
-            <h1>Pilates Coaching</h1>
-            <p>Find your strength through controlled, mindful movement.</p>
+        <div id="pilates" class="page-content pilates-page">
+            <div class="pilates-container">
+                <!-- Title -->
+                <div class="pilates-title">
+                    <h1>Pilates</h1>
+                </div>
+
+                <!-- Images Section -->
+                <div class="pilates-images">
+                    <img src="images/pilates-1.png" alt="Pilates Exercise 1" class="pilates-img">
+                    <img src="images/pilates-2.jpg" alt="Pilates Exercise 2" class="pilates-img">
+                </div>
+
+                <!-- Content Boxes -->
+                <div class="pilates-content-boxes">
+                    <div class="pilates-box pilates-expectations">
+                        <h3>Was dich erwartet:</h3>
+                        <p>Pilates ist ein sanftes, aber effektives Ganzkörpertraining, das die Tiefenmuskulatur stärkt, die Haltung verbessert und die Beweglichkeit fördert. Mit gezielter Atmung und kontrollierten Übungen bringt es Körper und Geist in Einklang.<br><br>Für alle Altersstufen und Fitnesslevel geeignet.</p>
+                    </div>
+                    <div class="pilates-box pilates-details">
+                        <h3>Details:</h3>
+                        <p><strong>Ort:</strong> "Le Studio"<br>
+                        Steinebach 7, 6850 Dornbirn</p>
+                        <p><strong>Wann:</strong> Mittwoch, 18:30 Uhr</p>
+                    </div>
+                </div>
+
+                <!-- Interest Section -->
+                <div class="pilates-interest">
+                    <h3>INTERESSE?</h3>
+                    <p>Infos und Anmeldung unter 0650 8110137<br>
+                    Ich freue mich auf Dich.</p>
+                </div>
+            </div>
         </div>
 
         <div id="womens-health" class="page-content">
             <h1>Women's Health</h1>
-            <p>Dedicated support for every stage of your journey.</p>
+            <p>Coming soon ...!</p>
         </div>
     </main>
 
