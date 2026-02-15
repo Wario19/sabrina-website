@@ -83,9 +83,9 @@ header.hidden-on-home {
 }
 
 .cta-buttons {
-    margin-top: -150px;
+    margin-top: 40px;
     display: flex;
-    gap: 100px;
+    gap: 28px;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 50px;
@@ -149,8 +149,8 @@ header.hidden-on-home {
         height: 140px;
         flex: 1 1 100%;
     }
-    .cta-bu0ttons {
-        gap: 1420px;
+    .cta-buttons {
+        gap: 20px;
     }
 }
 
@@ -247,63 +247,55 @@ header.hidden-on-home {
     color: var(--text-color);
 }
 
+
+/* Layout Container */
 .vision-container {
-    max-width: 1100px;
-    width: 100%;
-    padding: 0 18px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    column-gap: 40px;
+    align-items: start;
+    padding: 60px 20px;
 }
 
 .vision-title {
-    font-family: 'Times New Roman', serif;
-    font-size: 100px;    
-    text-align: center;
-    margin-bottom: 60px;
-    color: #3e4a3f;
-    position: absolute;
-    right: 40px;
-    bottom: 150px;
+    grid-column: 2;
+    text-align: left;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 20px;
+    color: var(--dark-green);
 }
 
 .vision-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    position: relative;
-    flex-wrap: wrap;
+    display: contents; /* Allows children to participate in the vision-container grid */
 }
 
 
 .vision-image-wrapper {
-    position: absolute;
-    flex: 1 1 120px;
-    min-width: 260px;
-    border-radius: 100px;
-    bottom: 130px;
-    left: -30px;
+    grid-column: 1;
+    position: relative; /* Anchor for the absolute mission-box */
+    padding-bottom: 20px;
 }
 
-.image-placeholder {
+.vision-image-wrapper img {
     width: 100%;
-    max-width: 420px;
-    aspect-ratio: 3 / 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
+    border-radius: 4px;
+    display: block;
 }
 
 .mission-box {
     position: absolute;
-    top: 50px;
-    left: 350px;
+    top: 50px;       /* Adjust vertical position */
+    left: 65%;      /* Overlaps the right side of the image */
+    width: 110%;    /* Makes the box wider than the image's right edge */
+    max-width: 450px;
     background-color: var(--beige-bg);
-    border: 1.5px solid var(--dark-green);
-    padding: 18px;
-    width: clamp(260px, 42%, 480px);
+    border: 1px solid var(--dark-green);
+    padding: 25px;
+    z-index: 10;
     text-align: left;
-    z-index: 2;
 }
-
 .mission-intro {
     font-size: 1.6rem;
     font-style: italic;
@@ -318,13 +310,9 @@ header.hidden-on-home {
 
 
 .vision-text {
-    flex: 1 1 340px;
+    grid-column: 2;
+    margin-top: 300px; /* Space below the title */
     text-align: left;
-    margin-top: 300px; /* push vision text down further to clear the mission box */
-    position:relative;
-    right: 30px;
-    min-width: 800px;
-    bottom: -50px;
 }
 
 .vision-text p {
@@ -340,23 +328,31 @@ header.hidden-on-home {
 
 
 @media (max-width: 900px) {
-    .vision-content {
+    .vision-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .mission-box {
-        position: static;
-        transform: none;
-        margin-top: -30px;
+
+    .vision-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .vision-image-wrapper {
         width: 90%;
+        margin-bottom: 150px; /* Extra space for the box overflow */
     }
+
+    .mission-box {
+        left: 50%;
+        transform: translateX(-50%); /* Center the box over the image */
+        top: 85%;                   /* Move box below the person's face */
+        width: 95%;
+    }
+
     .vision-text {
-        padding-left: 0;
-        margin-top: 20px;
-    }
-    .cta-buttons button {
-        width: 100%;
-        max-width: 380px;
+        text-align: center;
     }
 }
 
@@ -382,12 +378,12 @@ header.hidden-on-home {
 .hero-thumb {
     width: 100%;
     max-width: 420px;
-    height: 90%;
+    height: auto;
 }
 .vision-title {
     font-size: clamp(1.6rem, 6vw, 2.8rem);
     margin-bottom: 30px;
-    margin-left: 100px;
+    margin-left: 0;
 }
 .mission-intro {
     font-size: 1.1rem;
