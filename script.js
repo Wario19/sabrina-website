@@ -35,5 +35,25 @@ function showPage(pageId) {
         }
     }
 
+    // Reset scroll indicator visibility when returning home
+    if (pageId === 'home') {
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (scrollIndicator) {
+            scrollIndicator.classList.remove('hidden');
+        }
+    }
+
     // No body background toggle needed; hero container handles homepage image
 }
+
+// Fade out scroll indicator as user scrolls
+window.addEventListener('scroll', function() {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    const homePage = document.querySelector('#home.active');
+    
+    if (scrollIndicator && homePage) {
+        // Calculate opacity: starts at 1, gradually fades to 0 over 300px
+        const opacity = Math.max(0, 1 - (window.scrollY / 300));
+        scrollIndicator.style.opacity = opacity;
+    }
+});
