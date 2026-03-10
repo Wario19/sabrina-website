@@ -154,7 +154,7 @@ header.hidden-on-home {
 
 @media (max-width: 900px) {
     .cta-buttons .cta-btn {
-        height: 140px;
+        height: 200px;
         flex: 1 1 100%;
     }
     .cta-buttons {
@@ -219,6 +219,10 @@ header.hidden-on-home {
     object-fit: cover;
     display: block;
     z-index: 1;
+}
+
+.hero-thumb:first-child img {
+    object-position: center 25%;
 }
 
 .placeholder-label {
@@ -412,7 +416,13 @@ header.hidden-on-home {
     .hero-thumb {
         width: 100%;
         max-width: none;
-        height: calc((100vh - 78px - 48px) / 3); /* split available height across three thumbs */
+        height: calc((100vh - 78px - 48px) * 2); /* doubled size for mobile */
+    }
+    .cta-buttons .cta-btn {
+        flex: 0 1 80%;
+        max-width: 400px;
+        height: 200px;
+        min-width: 0;
     }
         
 }
@@ -568,6 +578,7 @@ header.hidden-on-home {
     .pilates-img {
         max-width: 100%;
         width: 100%;
+        max-height: 500px;
     }
 
     .pilates-content-boxes {
